@@ -164,7 +164,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="ENVIAR"/>
                                 <connections>
                                     <action selector="sendTapped:" destination="ckK-Wo-uNR" eventType="touchUpInside" id="9bA-s2-g6T"/>
-                                    <segue destination="PvH-0G-Trb" kind="show" identifier="seleccionarContactoSegue" id="gIG-Ch-K5G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -181,6 +180,7 @@
                     <connections>
                         <outlet property="mapView" destination="omt-cb-fFJ" id="2ic-HG-aY5"/>
                         <outlet property="sendButton" destination="4jr-L9-MLh" id="fbe-fe-KK9"/>
+                        <segue destination="PvH-0G-Trb" kind="show" identifier="seleccionarContactoSegue" id="pTj-XY-VRy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShP-lU-aJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -202,7 +202,6 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="6Ft-ot-W7t"/>
                                     <constraint firstAttribute="height" constant="150" id="CKS-cQ-zPd"/>
                                     <constraint firstAttribute="width" constant="150" id="Qwo-JR-eIs"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="YaG-t9-Zu2"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="mBR-8n-jus"/>
                                 </constraints>
                             </imageView>
@@ -343,16 +342,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HGv-ii-pTc">
-                                                    <rect key="frame" x="20" y="16.666666666666668" width="28" height="15.666666666666666"/>
+                                                    <rect key="frame" x="20.000000000000004" y="13.333333333333334" width="33.333333333333336" height="19.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ydc-WT-Llv">
-                                                    <rect key="frame" x="19.999999999999996" y="34.666666666666664" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <rect key="frame" x="19.999999999999996" y="35.333333333333329" width="49.666666666666664" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -415,43 +414,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio Enviado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-RU-7QI">
-                                <rect key="frame" x="125.33333333333333" y="82" width="142.33333333333337" height="26.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-RU-7QI">
+                                <rect key="frame" x="76.333333333333329" y="82" width="240.66666666666669" height="48"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Audio Enviado">
+                                        <attributes>
+                                            <font key="NSFont" size="40" name="BodoniSvtyTwoITCTT-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-micrófono-100" translatesAutoresizingMaskIntoConstraints="NO" id="JHf-Cr-gwc">
-                                <rect key="frame" x="116.66666666666669" y="179" width="160" height="107"/>
+                                <rect key="frame" x="116.66666666666669" y="200.66666666666666" width="160" height="106.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="8so-ar-I28"/>
                                     <constraint firstAttribute="height" constant="107" id="cmZ-E5-g58"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volumen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFV-Fz-gEt">
-                                <rect key="frame" x="64" y="421" width="71" height="21"/>
+                                <rect key="frame" x="64" y="456.66666666666669" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-Kg-PYz">
-                                <rect key="frame" x="178" y="421" width="187" height="31"/>
+                                <rect key="frame" x="178" y="456.66666666666669" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Vfm-wZ-3XA"/>
                                     <constraint firstAttribute="width" constant="183" id="kEq-lu-1U6"/>
                                 </constraints>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIY-qs-XiS">
-                                <rect key="frame" x="142.66666666666666" y="336" width="108" height="35"/>
+                                <rect key="frame" x="116" y="357.66666666666669" width="161" height="49"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Repreducir"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reproducir">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="29"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="tappedReproducir:" destination="Uzt-sW-q2H" eventType="touchUpInside" id="Scz-vk-qbl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ld1-QV-bia"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9772013235" green="0.71495173609999996" blue="0.37704050960000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="RPK-Kg-PYz" firstAttribute="top" secondItem="wIY-qs-XiS" secondAttribute="bottom" constant="50" id="6DL-7e-1S4"/>
                             <constraint firstItem="wIY-qs-XiS" firstAttribute="top" secondItem="JHf-Cr-gwc" secondAttribute="bottom" constant="50" id="6X4-Ll-uPi"/>
@@ -514,27 +520,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mensaje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-c1-zLk">
-                                <rect key="frame" x="16" y="79" width="335" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CC0-2j-MJK">
-                                <rect key="frame" x="76" y="234" width="240" height="128"/>
+                                <rect key="frame" x="35" y="343" width="316" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imagen Enviada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx5-2U-CGc">
-                                <rect key="frame" x="16" y="191" width="205" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx5-2U-CGc">
+                                <rect key="frame" x="24" y="237" width="87" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Foto:">
+                                        <attributes>
+                                            <font key="NSFont" size="40" name="BodoniSvtyTwoITCTT-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKQ-c1-zLk">
+                                <rect key="frame" x="16" y="90" width="335" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Mensaje:">
+                                        <attributes>
+                                            <font key="NSFont" size="40" name="BodoniSvtyTwoITCTT-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="onc-cV-cfI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9772013235" green="0.71495173609999996" blue="0.37704050960000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="rvw-kI-Ane"/>
                     <connections>
@@ -544,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSI-dw-Adx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="796"/>
+            <point key="canvasLocation" x="2583.969465648855" y="795.77464788732402"/>
         </scene>
         <!--Audio View Controller-->
         <scene sceneID="6Pc-T7-YHl">
@@ -595,7 +611,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="sendTapped:" destination="fqC-oK-GDj" eventType="touchUpInside" id="1KJ-1J-jp0"/>
-                                    <segue destination="PvH-0G-Trb" kind="show" identifier="seleccionarContactoSegue" id="eqW-fk-RvJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-oj-nCH">
@@ -627,6 +642,7 @@
                         <outlet property="recordButton" destination="vqh-Qw-Xxc" id="JXx-Jq-rC8"/>
                         <outlet property="sendButton" destination="JsH-5x-oxe" id="SkS-3W-O8A"/>
                         <outlet property="titleTextField" destination="Bg1-Wl-Z0F" id="Kf4-Zc-Xmv"/>
+                        <segue destination="PvH-0G-Trb" kind="show" identifier="seleccionarContactoSegue" id="f8A-FH-W4W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeF-Em-8rI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -775,7 +791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtN-MW-RMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173" y="34"/>
+            <point key="canvasLocation" x="3482" y="-604"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NJ4-Bk-7o6">
@@ -893,7 +909,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eqW-fk-RvJ"/>
+        <segue reference="pTj-XY-VRy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
@@ -914,7 +930,7 @@
             <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -24,7 +24,13 @@ class AudioViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPla
         setupRecorder()
         sendButton.isEnabled = false
         styleButtons()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+                view.addGestureRecognizer(tapGesture)
+
     }
+    @objc func hideKeyboard() {
+            view.endEditing(true)
+        }
 
     func setupRecorder() {
         let session = AVAudioSession.sharedInstance()
