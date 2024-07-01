@@ -16,8 +16,13 @@ class RegistroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+                view.addGestureRecognizer(tapGesture)
 
     }
+    @objc func hideKeyboard() {
+            view.endEditing(true)
+        }
     @IBAction func registrarTapped(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
                     mostrarAlerta(titulo: "Error", mensaje: "Por favor ingrese un email y contraseña válidos", accion: "Aceptar")

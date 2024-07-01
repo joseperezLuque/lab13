@@ -8,8 +8,9 @@
 import UIKit
 import Firebase
 
+
 class ElegirUsuarioViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-    
+
     @IBOutlet weak var listaUsuarios: UITableView!
     var usuarios:[Usuario] = []
     var imagenURL = ""
@@ -17,14 +18,17 @@ class ElegirUsuarioViewController: UIViewController,UITableViewDataSource, UITab
     var imagenID = ""
     var audioURL: String?
     var audioTitle: String?
-
+    var locationURL: String?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let urlubi = locationURL
+        print("urlUbicacion:")
+        print(urlubi ?? "no llega nada")
         listaUsuarios.delegate=self
         listaUsuarios.dataSource=self
-        Database.database().reference().child("usuario").observe(DataEventType.childAdded, with: { (snapshot) in
+        Database.database().reference().child("usuario").observe(DataEventType.childAdded, with: { snapshot in
                     print(snapshot)
                     let usuario = Usuario()
                     usuario.email = (snapshot.value as! NSDictionary)["email"] as! String
@@ -33,6 +37,7 @@ class ElegirUsuarioViewController: UIViewController,UITableViewDataSource, UITab
                     self.listaUsuarios.reloadData()
                 })
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return usuarios.count
     }
@@ -44,11 +49,20 @@ class ElegirUsuarioViewController: UIViewController,UITableViewDataSource, UITab
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let usuario = usuarios[indexPath.row]
-        let snap = ["from" : Auth.auth().currentUser?.email, "descripcion" : descrip, "imagenURL" : imagenURL, "imagenID": imagenID,"audioURL": audioURL ?? "",
-                    "audioTitle": audioTitle ?? "" ]
+            let usuario = usuarios[indexPath.row]
+
+            let snap: [String: Any] = [
+                "from": Auth.auth().currentUser?.email ?? "",
+                "descripcion": descrip,
+                "imagenURL": imagenURL,
+                "imagenID": imagenID,
+                "audioURL": audioURL ?? "",
+                "audioTitle": audioTitle ?? "",
+                "locationURL": locationURL ?? ""
+            ]
+            
+            Database.database().reference().child("usuario").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
+            navigationController?.popViewController(animated: true)
+        }
         
-        Database.database().reference().child("usuario").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
-        navigationController?.popViewController(animated: true)
-    }
 }

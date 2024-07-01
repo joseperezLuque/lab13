@@ -16,8 +16,12 @@ class iniciarSesionViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+                view.addGestureRecognizer(tapGesture)
     }
+    @objc func hideKeyboard() {
+            view.endEditing(true)
+        }
     
     @IBAction func iniciarSesionTapped(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text! , password: passwordTextField.text!){ (user, error) in
@@ -62,5 +66,6 @@ class iniciarSesionViewController: UIViewController {
             alerta.addAction(btnCancelar)
             present(alerta, animated: true, completion: nil)
         }
+    
     
 }

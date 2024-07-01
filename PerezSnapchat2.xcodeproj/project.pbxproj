@@ -12,6 +12,10 @@
 		B95B6F8F2C2F8D1D00301F56 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B95B6F8E2C2F8D1D00301F56 /* SDWebImage */; };
 		B95B6F912C2F8D1D00301F56 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B95B6F902C2F8D1D00301F56 /* SDWebImageMapKit */; };
 		B95B6F932C305C2200301F56 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B6F922C305C2200301F56 /* AudioViewController.swift */; };
+		B95B6F972C30B82E00301F56 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B6F962C30B82E00301F56 /* EditProfileViewController.swift */; };
+		B95B6F992C30C0A300301F56 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B95B6F982C30C0A300301F56 /* FirebaseInAppMessaging-Beta */; };
+		B95B6F9B2C30C0A300301F56 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B95B6F9A2C30C0A300301F56 /* FirebaseInAppMessagingSwift-Beta */; };
+		B95B6F9D2C30C0A300301F56 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B95B6F9C2C30C0A300301F56 /* FirebaseMessaging */; };
 		B96DB56E2C2BD10900D36941 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96DB56D2C2BD10900D36941 /* RegistroViewController.swift */; };
 		B973A6272C2B647C00E3D8CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973A6262C2B647C00E3D8CF /* AppDelegate.swift */; };
 		B973A6292C2B647C00E3D8CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973A6282C2B647C00E3D8CF /* SceneDelegate.swift */; };
@@ -29,12 +33,18 @@
 		B973A64B2C2B917A00E3D8CF /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973A64A2C2B917A00E3D8CF /* ImagenViewController.swift */; };
 		B973A64D2C2BA90A00E3D8CF /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973A64C2C2BA90A00E3D8CF /* ElegirUsuarioViewController.swift */; };
 		B973A6512C2BB29800E3D8CF /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973A6502C2BB29800E3D8CF /* Usuario.swift */; };
+		B9818E0D2C31C69700CFA51E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9818E0C2C31C69700CFA51E /* MapKit.framework */; };
+		B9818E0F2C31C7AA00CFA51E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9818E0E2C31C7AA00CFA51E /* LocationViewController.swift */; };
+		B9818E132C32FCE800CFA51E /* VerAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9818E122C32FCE800CFA51E /* VerAudioViewController.swift */; };
+		B9818E152C32FD0400CFA51E /* VerMapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9818E142C32FD0400CFA51E /* VerMapaViewController.swift */; };
+		B9818E172C33034200CFA51E /* EscucharAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9818E162C33034200CFA51E /* EscucharAudioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B95B6F892C2DD3C000301F56 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		B95B6F8B2C2DDD8E00301F56 /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
 		B95B6F922C305C2200301F56 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		B95B6F962C30B82E00301F56 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		B96DB56D2C2BD10900D36941 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		B973A6232C2B647C00E3D8CF /* PerezSnapchat2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerezSnapchat2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B973A6262C2B647C00E3D8CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +60,11 @@
 		B973A64A2C2B917A00E3D8CF /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
 		B973A64C2C2BA90A00E3D8CF /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
 		B973A6502C2BB29800E3D8CF /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		B9818E0C2C31C69700CFA51E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B9818E0E2C31C7AA00CFA51E /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		B9818E122C32FCE800CFA51E /* VerAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerAudioViewController.swift; sourceTree = "<group>"; };
+		B9818E142C32FD0400CFA51E /* VerMapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerMapaViewController.swift; sourceTree = "<group>"; };
+		B9818E162C33034200CFA51E /* EscucharAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscucharAudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +72,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9818E0D2C31C69700CFA51E /* MapKit.framework in Frameworks */,
 				B95B6F8F2C2F8D1D00301F56 /* SDWebImage in Frameworks */,
 				B973A6422C2B66B500E3D8CF /* FirebaseDatabase in Frameworks */,
+				B95B6F9D2C30C0A300301F56 /* FirebaseMessaging in Frameworks */,
 				B973A6442C2B66B500E3D8CF /* FirebaseFirestore in Frameworks */,
+				B95B6F992C30C0A300301F56 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				B973A63E2C2B66B500E3D8CF /* FirebaseAnalytics in Frameworks */,
 				B973A6462C2B66B500E3D8CF /* FirebaseStorage in Frameworks */,
 				B95B6F912C2F8D1D00301F56 /* SDWebImageMapKit in Frameworks */,
+				B95B6F9B2C30C0A300301F56 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				B973A6402C2B66B500E3D8CF /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +94,7 @@
 			children = (
 				B973A6252C2B647C00E3D8CF /* PerezSnapchat2 */,
 				B973A6242C2B647C00E3D8CF /* Products */,
+				B9818E0B2C31C69700CFA51E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +114,9 @@
 				B973A6472C2B8ACC00E3D8CF /* PerezSnapchat2.entitlements */,
 				B973A6262C2B647C00E3D8CF /* AppDelegate.swift */,
 				B973A6282C2B647C00E3D8CF /* SceneDelegate.swift */,
+				B9818E142C32FD0400CFA51E /* VerMapaViewController.swift */,
 				B973A62C2C2B647C00E3D8CF /* Main.storyboard */,
+				B9818E162C33034200CFA51E /* EscucharAudioViewController.swift */,
 				B973A62F2C2B647D00E3D8CF /* Assets.xcassets */,
 				B973A6312C2B647D00E3D8CF /* LaunchScreen.storyboard */,
 				B973A6342C2B647D00E3D8CF /* Info.plist */,
@@ -112,7 +134,10 @@
 				B973A64A2C2B917A00E3D8CF /* ImagenViewController.swift */,
 				B96DB56D2C2BD10900D36941 /* RegistroViewController.swift */,
 				B95B6F8B2C2DDD8E00301F56 /* VerSnapViewController.swift */,
+				B9818E122C32FCE800CFA51E /* VerAudioViewController.swift */,
 				B95B6F922C305C2200301F56 /* AudioViewController.swift */,
+				B95B6F962C30B82E00301F56 /* EditProfileViewController.swift */,
+				B9818E0E2C31C7AA00CFA51E /* LocationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -124,6 +149,14 @@
 				B95B6F892C2DD3C000301F56 /* Snap.swift */,
 			);
 			path = Modelos;
+			sourceTree = "<group>";
+		};
+		B9818E0B2C31C69700CFA51E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9818E0C2C31C69700CFA51E /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +183,9 @@
 				B973A6452C2B66B500E3D8CF /* FirebaseStorage */,
 				B95B6F8E2C2F8D1D00301F56 /* SDWebImage */,
 				B95B6F902C2F8D1D00301F56 /* SDWebImageMapKit */,
+				B95B6F982C30C0A300301F56 /* FirebaseInAppMessaging-Beta */,
+				B95B6F9A2C30C0A300301F56 /* FirebaseInAppMessagingSwift-Beta */,
+				B95B6F9C2C30C0A300301F56 /* FirebaseMessaging */,
 			);
 			productName = PerezSnapchat2;
 			productReference = B973A6232C2B647C00E3D8CF /* PerezSnapchat2.app */;
@@ -212,16 +248,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B973A6492C2B8BC600E3D8CF /* SnapsViewController.swift in Sources */,
+				B9818E172C33034200CFA51E /* EscucharAudioViewController.swift in Sources */,
 				B973A64B2C2B917A00E3D8CF /* ImagenViewController.swift in Sources */,
+				B95B6F972C30B82E00301F56 /* EditProfileViewController.swift in Sources */,
 				B973A6512C2BB29800E3D8CF /* Usuario.swift in Sources */,
 				B973A62B2C2B647C00E3D8CF /* iniciarSesionViewController.swift in Sources */,
 				B95B6F8C2C2DDD8E00301F56 /* VerSnapViewController.swift in Sources */,
 				B95B6F8A2C2DD3C000301F56 /* Snap.swift in Sources */,
+				B9818E0F2C31C7AA00CFA51E /* LocationViewController.swift in Sources */,
+				B9818E152C32FD0400CFA51E /* VerMapaViewController.swift in Sources */,
 				B973A6272C2B647C00E3D8CF /* AppDelegate.swift in Sources */,
 				B96DB56E2C2BD10900D36941 /* RegistroViewController.swift in Sources */,
 				B95B6F932C305C2200301F56 /* AudioViewController.swift in Sources */,
 				B973A6292C2B647C00E3D8CF /* SceneDelegate.swift in Sources */,
 				B973A64D2C2BA90A00E3D8CF /* ElegirUsuarioViewController.swift in Sources */,
+				B9818E132C32FCE800CFA51E /* VerAudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +415,7 @@
 				CODE_SIGN_ENTITLEMENTS = PerezSnapchat2/PerezSnapchat2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JR7FUWDNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PerezSnapchat2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -402,6 +444,7 @@
 				CODE_SIGN_ENTITLEMENTS = PerezSnapchat2/PerezSnapchat2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JR7FUWDNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PerezSnapchat2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,6 +519,18 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B95B6F8D2C2F8D1D00301F56 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
+		};
+		B95B6F982C30C0A300301F56 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		B95B6F9A2C30C0A300301F56 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		B95B6F9C2C30C0A300301F56 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseMessaging;
 		};
 		B973A63D2C2B66B500E3D8CF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

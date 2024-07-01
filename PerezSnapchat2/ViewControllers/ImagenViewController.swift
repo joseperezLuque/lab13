@@ -18,7 +18,13 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate,UI
         imagePicker.delegate = self
         elegirContactoBoton.isEnabled = false
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+                view.addGestureRecognizer(tapGesture)
+
     }
+    @objc func hideKeyboard() {
+            view.endEditing(true)
+        }
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descripcionTextField: UITextField!
     @IBOutlet weak var elegirContactoBoton: UIButton!
@@ -54,27 +60,6 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate,UI
                 })
             }
         }
-        /*
-         let alertaCarga = UIAlertController(title: "Cargando Imagen ...", message: "0%", preferredStyle: .alert)
-         let progresoCarga: UIProgressView = UIProgressView(progressViewStyle: .default)
-         cargarImagen.observe(.progress) { (snapshot) in
-         let porcentaje = Double(snapshot.progress!.completedUnitCount)
-         / Double(snapshot.progress!.totalUnitCount)
-         print(porcentaje)
-         progresoCarga.setProgress(Float(porcentaje), animated: true)
-         progresoCarga.frame = CGRect(x: 10, y: 70, width: 250, height: 0)
-         alertaCarga.message = String(round(porcentaje*100.0)) + "%"
-         if porcentaje>=1.0{
-         alertaCarga.dismiss(animated: true, completion: nil)
-         }
-         }
-         let btnOK = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-         alertaCarga.addAction(btnOK)
-         alertaCarga.view.addSubview(progresoCarga)
-         present(alertaCarga, animated: true, completion: nil)
-         }
-         
-         }*/
     }
          func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
          let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage

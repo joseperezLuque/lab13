@@ -1,23 +1,19 @@
-//
-//  snap.swift
-//  PerezSnapchat2
-//
-//  Created by Jose Adriano Perez Luque on 27/06/24.
-//
-
-import Foundation
-class Snap{
+import CoreLocation
+class Snap {
     var imagenURL = ""
     var descrip = ""
     var from = ""
     var id = ""
     var imagenID = ""
-    var audioURL: String = ""
-    var contentType: ContentType = .image
-    init() {}
+    var audioURL = ""
+    var audioTitle = ""
+    var locationURL = ""
+    var contentType: ContentType = .image // Por defecto, contentType es .image
+
+    
 
     enum ContentType {
-           case image
-           case audio
-       }
+        case image
+        case audio
+    }
 }
